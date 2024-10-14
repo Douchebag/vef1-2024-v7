@@ -83,7 +83,7 @@ function shortest(str) {
     let shortest = split1[0];
 
     for (let i = 0; i < split1.length; i++) {
-      if (split1[i].length < shortest.length && split1[i].length != " ") {
+      if (split1[i].length < shortest.length && split1[i] != " ") {
         shortest = split1[i];
       }
     }
@@ -206,7 +206,7 @@ function start() {
   if (str === null) {
     return;
   }
-  while (aftur != null) {
+  while (aftur != null && str != null) {
     if (isString(str) && str != "") {
       alert(`Lengsta orðið er: ${longest(str)}\nStysta orðið er: ${shortest(str)}\nStrengurinn snúinn við: ${reverse(str)}\nFjöldi sérhljóða í streng: ${vowels(str)}\nFjöldi samhljóða í streng: ${consonants(str)}\nStrengurinn er ${palindrome(str) ? "" : "ekki"} samhverfur`);
       let aftur = confirm("Viltu prófa aftur?");
